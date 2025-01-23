@@ -1,0 +1,11 @@
+<!ELEMENT persoa (nome*, apelidos, data_nacemento, revisado)>
+    <!ELEMENT nome (#PCDATA)>
+      <!ATTLIST nome n_id ID #REQUIRED>
+    <!ELEMENT apelidos (#PCDATA)>
+    <!ELEMENT data_nacemento (ano,mes,dia)>
+    <!ATTLIST data_nacemento calendario (2023|2024|2025) #REQUIRED>
+      <!ELEMENT ano (#PCDATA)>
+      <!ELEMENT mes (#PCDATA)>
+      <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT revisado EMPTY>
+    <!ATTLIST revisado equipo IDREFS #IMPLIED>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE persoa [
+<!ELEMENT persoa (nome*, apelidos, data_nacemento, revisado)> <!-- el orden y la existencia de cada rama es obligatoria -->
+    <!ELEMENT nome (#PCDATA)>
+            <!ATTLIST nome n_id ID #REQUIRED> <!-- Al ser tipo ID no se puede repetir. Es sensible a mayus y minus-->
+    <!ELEMENT apelidos (#PCDATA)>
+    <!ELEMENT data_nacemento (ano, mes, dia)>
+        <!ATTLIST data_nacemento calendario (2023|2024|2025) #REQUIRED>  <!-- IMPLIED es un elemento opcional --> <!-- REQUIRED es un elemento obligatorio -->
+      <!ELEMENT ano (#PCDATA)> <!-- (2023| 2024) colo es valido uno de los valores indicados dentro-->
+      <!ELEMENT mes (#PCDATA)>
+      <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT revisado EMPTY>
+    <!ATTLIST revisado equipo IDREFS #IMPLIED> <!-- Esto permite que un atributo sea UNA REFERENCIA de otro elemento, ya existente. Pueden haber varias referencias, pero ajuro el indice debe existir para que sea valido. Si no existe, no es valido -->
+        <!-- <!ATTLIST revisado equipo CDATA #FIXED "5">  Al usar FIXED, le digo que tiene que recibir un atributo obligatorio 5. O puede no tener atributo y tmb es valido. IMPLIED sensible a mayusculas y minusculas. tiene que  ser mayusculas -->
+]>
+<!-- + es obligatorio, debe aparecer una o mas veces -->
+<!-- ? es opcional, puede aparecer cero o una vez -->
+<!-- * es opcional, puede aparecer 0, 1 o mas veces -->
+<persoa>
+  <nome n_id="R1">Daniel</nome>
+  <nome n_id="R2">Jose</nome>
+  <apelidos>Garcia Lopez</apelidos>
+  <data_nacemento calendario="2025">
+    <ano>2000</ano>
+    <mes>04</mes>
+    <dia>20</dia>
+  </data_nacemento>
+  <revisado equipo="R1"/>
+</persoa>
+
+
+<!-- PCDATA en elementos, CDATA en atributos. Corresponde a datos de texto -->
+<!-- NMTOKEN corresponde a aceptar unicamente los caracteres permitidos por XML para nombrar cosas (letras, numeros, puntos, guions, guines bajos y dos puntos ":" -->
+

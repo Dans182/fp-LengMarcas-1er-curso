@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE persoa SYSTEM "prueba21.dtd">
+
+<persoa>
+  <nome n_id="R1">Daniel</nome>
+  <nome n_id="R2">Jose</nome>
+  <apelidos>Garcia Lopez</apelidos>
+  <data_nacemento calendario="2025">
+    <ano>2000</ano>
+    <mes>04</mes>
+    <dia>20</dia>
+  </data_nacemento>
+  <revisado equipo="R1"/>
+</persoa>
+
+
+<!-- PCDATA en elementos, CDATA en atributos. Corresponde a datos de texto -->
+<!-- NMTOKEN corresponde a aceptar unicamente los caracteres permitidos por XML para nombrar cosas (letras, numeros, puntos, guions, guines bajos y dos puntos ":" -->
+
