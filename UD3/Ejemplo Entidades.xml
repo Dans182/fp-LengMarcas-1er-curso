@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE tarxetaVisita [
+<!ELEMENT tarxetaVisita (poboacion)>
+<!ELEMENT poboacion (#PCDATA)>
+<!ENTITY cidade "Santiago de Compostela">
+]>
+
+<tarxetaVisita>
+<poboacion>&cidade;</poboacion>
+</tarxetaVisita>

@@ -1,4 +1,5 @@
-<!ELEMENT persoa (nome*, apelidos, data_nacemento, revisado)>
+
+<!ELEMENT persoa (nome+, apelidos*, data_nacemento, revisado?)>
     <!ELEMENT nome (#PCDATA)>
       <!ATTLIST nome n_id ID #REQUIRED>
     <!ELEMENT apelidos (#PCDATA)>
