@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE envios SYSTEM "8-DTD_parametros.dtd">
+<envios>
+<origen rua="Gran via" numero="25" poblacion ="Marin"/>
+<destino rua="Gran via" numero="25" poblacion ="Marin"/>
+</envios>

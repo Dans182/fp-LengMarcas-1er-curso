@@ -8,3 +8,5 @@
 <tarxetaVisita>
 <poboacion>&cidade;</poboacion>
 </tarxetaVisita>
+
+<!-- Ejemplo de entidad interna. El navegador interpreta el XML y sustituye la entidad por su valor-->

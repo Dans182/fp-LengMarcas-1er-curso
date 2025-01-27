@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE entidadeLibro [
+<!ENTITY capitulo1 SYSTEM "Ejemplo_entidades_2_capitulo1.xml">
+<!ELEMENT entidadeLibro (tema, capitulo)>
+<!ELEMENT tema (#PCDATA)>
+<!ELEMENT capitulo (para)>
+<!ELEMENT para (#PCDATA)>
+]>
+
+<entidadeLibro>
+<tema>Exemplo de entidade externa;</tema>
+&capitulo1;
+</entidadeLibro>
+
+<!-- Ejemplo de entidad externa. El navegador interpreta el XML y sustituye la entidad por su valor-->
+
+<!--En los navegadores, no me sustituye las entidades externas, mas por un tema de seguridad para evitar ciber ataques, que ahora los navegadores no permiten la sustitucion de entidades externas -->

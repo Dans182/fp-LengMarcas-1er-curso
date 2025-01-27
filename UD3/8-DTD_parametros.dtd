@@ -1,0 +1,16 @@
+<!ELEMENT envios (origen, destino)>
+<!ELEMENT origen EMPTY>
+<!ELEMENT destino EMPTY>
+
+<!ENTITY % enderezo
+"rua CDATA #REQUIRED
+numero CDATA #IMPLIED
+poblacion CDATA #REQUIRED">
+
+<!ATTLIST origen 
+%enderezo;>
+
+<!ATTLIST destino
+rua CDATA #REQUIRED
+numero CDATA #IMPLIED
+poblacion CDATA #REQUIRED>
